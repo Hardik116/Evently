@@ -61,7 +61,7 @@ export async function getEventById(eventId: string) {
 
 // UPDATE
 export async function updateEvent({ userId, event, path }: UpdateEventParams) {
-  try {
+  try {  
     await connectToDatabase()
 
     const eventToUpdate = await Event.findById(event._id)
